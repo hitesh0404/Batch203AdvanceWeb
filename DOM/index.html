@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .remove {
+        display: none;
+      }
+      .dark {
+        color: white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="height: 50vh">
+      <button type="button">Switch Mode</button>
+    </div>
+
+    <div class="row justify-content-center align-items-center g-2" >
+      <div class="col" style="height: 100px; ">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro consectetur iste consequuntur enim id delectus iure nobis tenetur a laudantium unde nemo, cum, distinctio numquam ipsa quam! Doloribus, libero corporis?
+        <button type="button">Switch Mode</button>
+      </div>
+      <div class="col" style="height: 100px; ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aspernatur! Aspernatur animi dolorem laboriosam enim deserunt minus voluptatibus facilis, iure magnam, pariatur odit, quos hic vero itaque eum sunt doloribus?
+        <button type="button">Switch Mode</button>
+      </div>
+      <div class="col" style="height: 100px; ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptas maxime hic ex libero saepe alias enim error cupiditate nobis consequuntur recusandae earum mollitia, nesciunt expedita consequatur unde, soluta numquam.
+        <button type="button">Switch Mode</button>
+      </div>
+    </div>
+
+    <h1 id="heading">Hello</h1>
+    <p class="para">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
+      consequuntur consequatur dolore repudiandae corporis, consectetur
+      exercitationem molestias. A nulla, dolore deserunt autem excepturi labore
+      deleniti mollitia, magni, consequuntur iste est.
+    </p>
+    <ol>
+      <li class="element">hello world 1</li>
+      <li class="element">hello world 2</li>
+      <li class="element">hello world 3</li>
+      <li class="element">hello world 4</li>
+    </ol>
+    <p id="content">
+      hello
+      <span> world</span>
+      here it's me
+    </p>
+    <script>
+      let parent = document.querySelector("#content");
+      for (let index = 1; index < 11; index++) {
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode(`2 x ${index} = ${2 * index}`));
+        parent.appendChild(p);
+      }
+    </script>
+
+    <script>
+      function theme(event) {
+        event.currentTarget.parentElement.classList.toggle("dark");
+      }
+      
+      button = document.querySelectorAll("button");
+      for(const element of button) {
+        element.addEventListener("click", theme);
+      }
+
+      let row = document.querySelector('.row')
+      row.addEventListener('click',()=>{
+        console.log("row element is clicked");
+      })
+
+
+
+      function theme1(event) {
+        event.currentTarget.classList.toggle("dark");
+      }
+      let body = document.querySelector('body')
+      body.addEventListener('click',theme1)
+
+
+
+
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
