@@ -58,42 +58,7 @@
       <span> world</span>
       here it's me
     </p>
-    <script>
-      let parent = document.querySelector("#content");
-      for (let index = 1; index < 11; index++) {
-        const p = document.createElement("p");
-        p.appendChild(document.createTextNode(`2 x ${index} = ${2 * index}`));
-        parent.appendChild(p);
-      }
-    </script>
-
-    <script>
-      function theme(event) {
-        event.currentTarget.parentElement.classList.toggle("dark");
-      }
-      
-      button = document.querySelectorAll("button");
-      for(const element of button) {
-        element.addEventListener("click", theme);
-      }
-
-      let row = document.querySelector('.row')
-      row.addEventListener('click',()=>{
-        console.log("row element is clicked");
-      })
-
-
-
-      function theme1(event) {
-        event.currentTarget.classList.toggle("dark");
-      }
-      let body = document.querySelector('body')
-      body.addEventListener('click',theme1)
-
-
-
-
-    </script>
+   
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
